@@ -68,15 +68,17 @@ input {
 input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
 
 #princial {width: 1024px; margin: 0 auto; }
-#cuadro {margin: 230px auto; width: 30%  ; text-align: center;}
+#cuadro {margin: 100px auto; width: 30%  ; text-align: center;}
             
         </style>
     </head>
     <h:body id="principal">
         <div id="cuadro" >
 	<h:form>
-		<h3>Login</h3>
-                
+		
+                <h:graphicImage value="/resources/images/user.jpg"></h:graphicImage>
+                <br></br>
+                <br></br>
                 <h:inputText id="username" p:placeholder="Usuario" value="#{login.user}"></h:inputText>	
                 <h:message for="username"></h:message>
 		<br /><br />
@@ -87,7 +89,7 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
 		<br /><br />
 		
                 <h:commandButton class="btn-primary" action="#{login.validateUsernamePassword}"
-			value="Login"></h:commandButton>
+			value="Entrar"></h:commandButton>
                 
 	</h:form>
         </div>
