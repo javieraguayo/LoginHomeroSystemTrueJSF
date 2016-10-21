@@ -1,4 +1,4 @@
-package com.journaldev.jsf.filter;
+package com.buchoDevelopers.jsf.filter;
 
 import java.io.IOException;
 import javax.servlet.Filter;

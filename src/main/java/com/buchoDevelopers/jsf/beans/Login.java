@@ -1,4 +1,4 @@
-package com.journaldev.jsf.beans;
+package com.buchoDevelopers.jsf.beans;
 
 import java.io.Serializable;
 
@@ -8,8 +8,8 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpSession;
 
-import com.journaldev.jsf.dao.LoginDAO;
-import com.journaldev.jsf.util.SessionUtils;
+import com.buchoDevelopers.jsf.dao.LoginDAO;
+import com.buchoDevelppers.jsf.util.SessionUtils;
 
 @ManagedBean
 @SessionScoped
@@ -45,24 +45,25 @@ public class Login implements Serializable {
 		this.user = user;
 	}
 
-	//validate login
+	//validacion login
 	public String validateUsernamePassword() {
 		boolean valid = LoginDAO.validate(user, pwd);
 		if (valid) {
+                    //redireccion de login
 			HttpSession session = SessionUtils.getSession();
 			session.setAttribute("username", user);
-			return "admin";
+			return "exito";
 		} else {
 			FacesContext.getCurrentInstance().addMessage(
 					null,
 					new FacesMessage(FacesMessage.SEVERITY_WARN,
-							"Incorrect Username and Passowrd",
-							"Please enter correct username and Password"));
+							"Credenciales Incorrectas",
+							"Ingrese Usuario y Password"));
 			return "login";
 		}
 	}
 
-	//logout event, invalidate session
+	//sesion invalida
 	public String logout() {
 		HttpSession session = SessionUtils.getSession();
 		session.invalidate();

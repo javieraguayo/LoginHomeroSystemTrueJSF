@@ -1,11 +1,11 @@
-package com.journaldev.jsf.dao;
+package com.buchoDevelopers.jsf.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.journaldev.jsf.util.DataConnect;
+import com.buchoDevelppers.jsf.util.DataConnect;
 
 public class LoginDAO {
 

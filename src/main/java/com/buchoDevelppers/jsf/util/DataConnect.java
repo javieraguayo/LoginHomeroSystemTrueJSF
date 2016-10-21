@@ -1,4 +1,4 @@
-package com.journaldev.jsf.util;
+package com.buchoDevelppers.jsf.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
